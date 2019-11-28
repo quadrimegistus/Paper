@@ -1,7 +1,7 @@
 {
-  "name": "paper-dashboard-pro-react",
+  "name": "paper-dashboard-react",
   "version": "1.1.0",
-  "description": "Premium Bootstrap 4 Paper UI Design",
+  "description": "Bootstrap 4 Paper UI Design",
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -12,32 +12,24 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "compile-sass": "node-sass src/assets/scss/paper-dashboard.scss src/assets/css/paper-dashboard.css",
     "minify-sass": "node-sass src/assets/scss/paper-dashboard.scss src/assets/css/paper-dashboard.min.css --output-style compressed",
-    "map-sass": "node-sass src/assets/scss/paper-dashboard.scss src/assets/css/paper-dashboard.css --source-map true"
+    "map-sass": "node-sass src/assets/scss/paper-dashboard.scss src/assets/css/paper-dashboard.css --source-map true",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/paper-dashboard-pro-react.git"
+    "url": "git+https://github.com/parallelam/Paper.git"
   },
-  "keywords": [
-    "react",
-    "admin",
-    "reactjs",
-    "bootstrap",
-    "bootstrap4",
-    "reactstrap"
-  ],
-  "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com)",
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/paper-dashboard-pro-react/issues"
-  },
-  "homepage": "https://github.com/creativetimofficial/paper-dashboard-pro-react#readme",
+  "homepage": "https://parallelam.github.io/Paper/",
   "dependencies": {
     "bootstrap": "4.3.1",
     "chart.js": "2.8.0",
     "classnames": "2.2.6",
+    "gh-pages": "^2.1.1",
     "history": "4.9.0",
     "moment": "2.24.0",
-    "node-sass": "4.12.0",
+    "node": "13.1.0",
+    "node-sass": "4.13.0",
     "nouislider": "13.1.5",
     "perfect-scrollbar": "1.4.0",
     "prop-types": "15.7.2",
